@@ -1,0 +1,300 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{graphicx} % figuras
+% \usepackage{subfigure} % subfiguras
+\usepackage{float} % para usar [H]
+\usepackage{amsmath}
+%\usepackage{txfonts}
+\usepackage{stackrel} 
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{enumerate} % enumerados
+\renewcommand{\labelitemi}{$-$}
+\renewcommand{\labelitemii}{$\cdot$}
+% \author{}
+% \title{Caratula}
+\begin{document}
+
+% Fancy Header and Footer
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \cfoot{}
+% \rfoot{\thepage}
+%
+
+% \usepackage[hidelinks]{hyperref} % CREA HYPERVINCULOS EN INDICE
+  
+% \author{}
+\title{Caratula}
+
+\begin{titlepage}
+    \begin{center}
+    \begin{figure}[htb]
+    \begin{center}
+    \includegraphics[width=3.5cm]{./img/upt.jpg}
+    \end{center}
+    \end{figure}
+    
+    \vspace*{0.15in}
+    \begin{Large}
+    \textbf{UNIVERSIDAD PRIVADA DE TACNA}\\
+    \end{Large}
+    
+    \vspace*{0.1in}
+    \begin{Large}
+    \textbf{FACULTAD DE INGENIERIA} \\
+    \end{Large}
+    
+    \vspace*{0.1in}
+    \begin{Large}
+    \textbf{ESCUELA PROFESIONAL DE INGENIERIA DE SISTEMAS} \\
+    \end{Large}
+    
+    \vspace*{0.5in}
+    \begin{Large}
+    \textbf{TITULO:}\\
+    \end{Large}
+    
+
+\vspace*{0.1in}
+\begin{Large}
+    PRACTICA DE LABORATORIO 04: ELABORACION DE DASHBOARDS EN POWER BI\\
+\end{Large}
+
+\vspace*{0.3in}
+\begin{Large}
+\textbf{Curso:} \\
+\end{Large}
+
+\vspace*{0.1in}
+\begin{large}
+    Inteligencia De Negocios\\
+\end{large}
+
+\vspace*{0.3in}
+\begin{Large}
+\textbf{Docente:} \\
+\end{Large}
+
+\vspace*{0.1in}
+\begin{large}
+Ing. Patrick Cuadros Quiroga\\
+\end{large}
+
+\vspace*{0.2in}
+\vspace*{0.1in}
+\begin{large}
+\textbf{Alumno:} \\
+\begin{flushleft}
+ Herrera Amezquita, Derian Francisco	\hfill	(2017059489) \\
+
+
+\end{flushleft}
+\end{large}
+\vspace*{0.1in}
+\begin{large}
+Tacna - Perú\\
+\end{large}
+\vspace*{0.1in}
+\begin{large}
+2021\\
+\end{large}
+
+\end{center}
+
+\end{titlepage}
+
+
+
+\tableofcontents % INDICE
+\thispagestyle{empty} % INDICE SIN NUMERO
+\newpage
+\setcounter{page}{1} % REINICIAR CONTADOR DE PAGINAS DESPUES DEL INDICE
+
+
+\section{Objetivos}
+A
+\section{Requerimientos}
+Conocimientos
+\\Para el desarrollo de esta práctica se requerirá de los siguientes conocimientos básicos:
+\\- Conocimientos básicos de administración de base de datos Microsoft SQL Server.
+\\- Conocimientos básicos de SQL.
+\\\\Software
+\\\\Asimismo se necesita los siguientes aplicativos:
+\\\\- Microsoft SQL Server 2017 o superior
+\\\\- Base de datos AdventureWorksDW 2017 o superior
+\\\\- Power BI Desktop.
+\\\\- Tener una cuenta Microsoft registrada en el Portal de Power Bi 
+
+\section{Consideraciones Iniciales}
+Microsoft Power BI es un conjunto de aplicaciones para el análisis empresarial, que permite unificar diferentes
+fuentes de datos, configura y analiza datos que son presentados de manera sencilla en tablas e informes, que
+pueden ser consultados de una manera muy fácil y atractiva en tiempo real por usuarios e integrantes de una
+misma empresa u organización.
+
+\section{Desarrollo}
+Paso 1: Para esta guía utilizaremos el cubo creado en la guía anterior. Inicie Power BI Desktop, busque y
+seleccione la opción Get Data
+\begin{center}
+    \includegraphics[width=10cm]{img/power.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=14cm]{img/1.png}  
+\end{center}
+Paso 2: Dentro de los resources seleccionaremos SQL Server database
+\begin{center}
+    \includegraphics[width=7cm]{img/2.png}  
+\end{center}
+Paso 3: Utilice el nombre de host o localhost para conectarse
+\begin{center}
+    \includegraphics[width=12cm]{img/3.png}  
+\end{center}
+Vamos a seleccionar Adventure Works DW2017
+\begin{center}
+    \includegraphics[width=15cm]{img/4.png}
+    \vspace{2cm}  
+\end{center}
+\begin{center}
+    \includegraphics[width=10cm]{img/5.png}  
+\end{center}
+Paso 4: Una vez conectado tendremos en nuestro lado dos toolbox, uno denominado VISUALIZATONS y
+otro denominado FIELDS.
+\\\\\\En FIELDS debe mostrar la Fact Table de Internet Sales y las dimensiones asociadas según las guías
+previas de cubos. 
+\begin{center}
+    \includegraphics[width=8cm]{img/paso4.png}  
+    \vspace{2cm}
+\end{center}
+Paso 5: Vamos a crear nuestro primer reporte. Seleccionaremos una gráfica de barras, en segundo lugar
+Sales Amount, Calendar Year y English Product Name. (Debe hacerlo en ese orden).
+\\\\La gráfica resultante es la siguiente:
+\begin{center}
+    \includegraphics[width=17cm]{img/6.png}
+    \vspace{2cm}  
+\end{center}
+Paso 7: Elimine la gráfica anterior y procederá a seleccionar gráfica de barras, en segundo lugar Sales
+Amount, English Product Name y Calendar Year. (Debe hacerlo en ese orden).
+\begin{center}
+    \includegraphics[width=15cm]{img/7.png}  
+\end{center}
+La gráfica cambiará, lo que indica que el orden de agregado es importante para las visualizaciones, aún
+habiendo seleccionado los mismos datos.
+\\\\Paso 8: Cree un nuevo reporte.
+\\\\Podemos crear un dashboard con gráficos simultáneos. Arrastre dos gráficas y seleccione una de ella
+para establecer las propiedades.
+\begin{center}
+    \includegraphics[width=15cm]{img/8.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=11cm]{img/graph.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=18cm]{img/9.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=18cm]{img/10.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=18cm]{img/11.png}  
+\end{center}
+Paso 10: Seleccione una de los valores de la gráfica de la izquierda para ver el comportamiento:
+\begin{center}
+    \includegraphics[width=18cm]{img/12.png}  
+\end{center}
+Paso 11: Ahora crearemos un mapa que muestre la proporción de ventas por zona geográfica. Arrastre
+un Mapa y una tabla
+\begin{center}
+    \includegraphics[width=13cm]{img/pic.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=11cm]{img/13.png}  
+\end{center}
+Paso 12: Ahora generaremos una gráfica de área.
+\begin{center}
+    \includegraphics[width=13cm]{img/14.png}  
+\end{center}
+En primer lugar seleccione una nueva página y agregue una gráfica de área.
+\\\\Luego seleccione las medidas que se van a mostrar en el gráfico:
+\begin{center}
+    \includegraphics[width=8cm]{img/pic1.png}  
+\end{center}
+Ordene el resultado por año de manera ascendente.
+\begin{center}
+    \includegraphics[width=15cm]{img/15.png}  
+\end{center}
+Paso 13: Agregaremos una gráfica de líneas. Vamos a seleccionar desde la tabla de hecho a Sales
+Amount.
+\begin{center}
+    \includegraphics[width=15cm]{img/17.png}  
+\end{center}
+A continuación agregaremos Calendar Year desde Order Date y luego English Country Region Name.
+Debe realizarse en este orden o el resultado será diferente.
+\begin{center}
+    \includegraphics[width=15cm]{img/16.png}  
+\end{center}
+Paso 14: Puede definir los nombres de las hojas para indicar el tipo de reporte y la información.
+Establezca nombres descriptivos según la información que usted quiere facilitar.
+\begin{center}
+    \includegraphics[width=14cm]{img/18.png}  
+\end{center}
+Paso 15: Crearemos un reporte (gráfico de barras) con filtrado básico. Seleccionar Sales Amount, English
+Country Region Name y Order date/Calendar Year. Buscará la sección Basic Filtering y marcará Canada /
+United Kingdom.
+\begin{center}
+    \includegraphics[width=17cm]{img/19.png}  
+\end{center}
+Paso 16: La siguiente gráfica es una Stacked Column Chart. Los atributos que utilizaremos son Sales
+Amount vs English ProductName vs Order Date/Calendar Year
+\begin{center}
+    \includegraphics[width=17cm]{img/20.png}
+    \vspace{2cm}  
+\end{center}
+Ahora incluya un filtro. Buscaremos productos que hayan vendido arriba de los \$400,000
+\begin{center}
+    \includegraphics[width=15cm]{img/21.png}  
+\end{center}
+Paso 17: Incluya un Table con los siguientes campos:
+\\\\Sales Amount, English Product Name y Calendar Year
+\\\\Seleccione Show Data
+\begin{center}
+    \includegraphics[width=15cm]{img/22.png}  
+\end{center}
+Podrá visualizar el detalle de ventas
+\begin{center}
+    \includegraphics[width=17cm]{img/23.png}  
+\end{center}
+Paso 18: Cambie la orientación del reporte:
+\begin{center}
+    \includegraphics[width=15cm]{img/24.png}  
+\end{center}
+Paso 19: Exporte su reporte para visualización
+\begin{center}
+    \includegraphics[width=11cm]{img/25.png}  
+\end{center}
+
+
+
+\section{Análisis de resultados}
+Utilizando la base de datos Chinook, investigue cómo generar la dimensión de tiempo y luego, crear los
+siguientes reportes (tome en cuenta que se necesita conocer los valores en dinero):
+\\\\Se requiere saber cuáles son los artistas que más han vendido en la plataforma
+\\\\• Ventas por país contra año
+\\• Ventas por país (mapa)
+\\• Ventas realizadas por artista y año.
+\\• Genere 4 reportes adicionales utilizando los datos que usted considere relevantes.
+\\• Investigue cómo visualizar los reportes que ha creado en dispositivos móviles.
+
+
+
+
+
+
+
+
+\end{document}
+
